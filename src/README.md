@@ -11,9 +11,13 @@ To run visualization: `python RNAvisual.py SEQ_DB.tsv`
 
 ### RN_Analyze
 Reading fasta file: `pip install biopython` 
-Bp distance: this requires miniconda 
+ViennaRNA RNA.bp_distance: this can be done several ways. 
+Using miniconda:
 1. `conda create -n viennarna -c bioconda viennarna` 
 2. `conda activate viennarna`
+Using homebrew(Linux/ mac):
+1. `brew tap brewsci/bio`
+2. `brew install viennarna`
 
 Alternatively follow steps provided by viennarna:
 			https://www.tbi.univie.ac.at/RNA/ViennaRNA/doc/html/install.html
