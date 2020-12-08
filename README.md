@@ -3,8 +3,10 @@
 Using dataset of Non Coding SNPs predict secondary structure with a variation of Nussinovs algorithm, `energy_min.py`
 `RN_Analyze.py` is run first and will use `energy_min.py` to return a .tsv file `SEQ_DB.tsv` with sequences and their corresponding dot bracket structures. Base pair distance is calculated using `bp_distance` from the RNA package taken from ViennaRNA.
 Visuals are created with `RNAvisual.py`.
+
 ## To Run
 First run: `python RN_Analyze.py SNP.tsv sequences.fa`
+
 To run visualization: `python RNAvisual.py SEQ_DB.tsv`
 
 ## Installations Required
