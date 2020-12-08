@@ -18,7 +18,7 @@ def main(argv):
 		
         # create dot bracket structures and add to .tsv file
         dot_bracket = energy_min(list(row.SEQ))
-        snp_dot_bracket = energy_min((list(row.SNP_SEQ))
+        snp_dot_bracket = energy_min(list(row.SNP_SEQ))
         snp_seq_data.loc[index, "SEQ_DB"] = "".join(dot_bracket)
         snp_seq_data.loc[index, "SNP_SEQ_DB"] = "".join(snp_dot_bracket)
 				    
