@@ -1,3 +1,8 @@
+'''
+Returns selected parts of fasta file as well as SNP file
+This allows for us to join our SNP file with a fasta file for easier analysis
+'''
+
 import pandas as pd
 from Bio import SeqIO
 
@@ -9,6 +14,7 @@ def seq_snip(snp_file, seq_file):
     new_row = {}
     # read FASTA file for sequences
     fasta_dict = dict()
+    #match sequence with info about sequence, seq_file is fasta file SNP file info about sequences
     with open(seq_file, "rt") as handle:
         for (key, value) in SeqIO.FastaIO.SimpleFastaParser(handle):
             new_row["ENSEMBL_ID"] = key
@@ -17,11 +23,9 @@ def seq_snip(snp_file, seq_file):
             snp_seq = list(fasta_dict[key])
             snps = snp.loc[(snp["ENSEMBL_ID"] == key)]
             for index, row in snps.iterrows():
-                # print(fasta_dict[key])
                 temp = snp_seq[row.SNP_REL_POS - 1]
                 snp_seq[row.SNP_REL_POS - 1] = row.SNP_TO
                 snp_seq_str = "".join(snp_seq)
-                # print(snp_seq_str)
                 snp_seq[row.SNP_REL_POS - 1] = temp
                 new_row["SNP"] = int(row["SNP"])
                 new_row["SNP_SEQ"] = snp_seq_str
