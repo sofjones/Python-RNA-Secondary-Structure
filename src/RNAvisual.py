@@ -1,3 +1,7 @@
+'''
+RNA Secondary Structure Visualizations using dash
+Able to choose which structure to visualize and select multiple for comparison
+'''
 import dash
 import dash_bio as dashbio
 import dash_core_components as dcc
