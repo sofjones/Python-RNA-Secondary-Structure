@@ -14,7 +14,7 @@ Reading fasta file: `pip install biopython`
 ViennaRNA RNA.bp_distance: this can be done several ways.   
 Using miniconda:  
 1. `conda create -n viennarna -c bioconda viennarna` 
-2. `conda activate viennarna`
+2. `conda activate viennarna`.     
 Using homebrew(Linux/ mac):  
 1. `brew tap brewsci/bio`
 2. `brew install viennarna`
