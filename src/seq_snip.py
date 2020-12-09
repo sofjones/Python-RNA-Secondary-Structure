@@ -28,6 +28,11 @@ def seq_snip(snp_file, seq_file):
                 snp_seq_str = "".join(snp_seq)
                 snp_seq[row.SNP_REL_POS - 1] = temp
                 new_row["SNP"] = int(row["SNP"])
+                new_row["SNP_FROM"] = row["SNP_FROM"]
+                new_row["SNP_REL_POS"] = int(row["SNP_REL_POS"])
+                new_row["SNP_TO"] = row["SNP_TO"]
+                new_row["CLINSIG"] = row["CLINSIG"]
+                new_row["BIOTYPE"] = row["BIOTYPE"]
                 new_row["SNP_SEQ"] = snp_seq_str
                 result = result.append(new_row, ignore_index=True)
 
