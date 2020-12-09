@@ -1,5 +1,7 @@
 '''
 included for reference 
+this is an early version of our Nussinov algorithm
+which has since been replaced by the file energy_min.py
 ''''
 
 import sys
