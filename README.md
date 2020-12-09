@@ -13,12 +13,12 @@ To run visualization: `python RNAvisual.py SEQ_DB.tsv`
 
 ### RN_Analyze
 Reading fasta file: `pip install biopython` 
-Bp distance: this requires miniconda 
+Bp distance: miniconda or anaconda can be used
 1. `conda create -n viennarna -c bioconda viennarna` 
 2. `conda activate viennarna`
 
-Alternatively follow steps provided by viennarna:
-			https://www.tbi.univie.ac.at/RNA/ViennaRNA/doc/html/install.html
+Alternatively follow steps provided by viennarna or use homebrew:
+https://www.tbi.univie.ac.at/RNA/ViennaRNA/doc/html/install.html
 ### RNAvisual
 `pip install dash`
 `pip install dash_bio`
@@ -69,7 +69,7 @@ run this first with
 
 outputs `SEQ\_DB.tsv`
 
-uses energy min to create dot structures for RNA sequences.
+RN_Analyze uses energy min to create dot structures for RNA sequences. This program takes 1-2 minutes to run
 
 ## RNAVisual
 
