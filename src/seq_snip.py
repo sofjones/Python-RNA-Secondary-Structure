@@ -16,6 +16,8 @@ def seq_snip(snp_file, seq_file):
     fasta_dict = dict()
     #match sequence with info about sequence, seq_file is fasta file SNP file info about sequences
     with open(seq_file, "rt") as handle:
+        # the following loops will add all the necessary information
+        # to the output file using the .fa and .tsv input files:
         for (key, value) in SeqIO.FastaIO.SimpleFastaParser(handle):
             new_row["ENSEMBL_ID"] = key
             new_row["SEQ"] = value
@@ -28,6 +30,11 @@ def seq_snip(snp_file, seq_file):
                 snp_seq_str = "".join(snp_seq)
                 snp_seq[row.SNP_REL_POS - 1] = temp
                 new_row["SNP"] = int(row["SNP"])
+                new_row["SNP_FROM"] = row["SNP_FROM"]
+                new_row["SNP_REL_POS"] = int(row["SNP_REL_POS"])
+                new_row["SNP_TO"] = row["SNP_TO"]
+                new_row["CLINSIG"] = row["CLINSIG"]
+                new_row["BIOTYPE"] = row["BIOTYPE"]
                 new_row["SNP_SEQ"] = snp_seq_str
                 result = result.append(new_row, ignore_index=True)
 
